@@ -67,92 +67,93 @@ export X_XDG_MAIL_DIR
 ```
 
 ```
-# $ tree  -a -P "*" -n --noreport -L 20 "$(pwd)" -o tree
+# $ tree  -a -P "*" -n --noreport -L 20 "$(pwd)" --charset=ascii-o tree
 
 /home/user
-├── bin
-├── .cache
-├── .config
-├── etc
-│   ├── fontconfig
-│   └── .git
-├── .local
-├── share
-│   ├── applications
-│   ├── desktop
-│   ├── desktop-directories
-│   ├── .git
-│   ├── sounds
-│   ├── templates
-│   └── themes
-├── stow
-│   ├── bin
-│   │   ├── bin
-│   │   ├── gist-pub
-│   │   ├── .git
-│   │   ├── opt
-│   │   └── sbin
-│   └── local
-│       ├── bash
-│       │   ├── .bash_aliases
-│       │   ├── .bash_color
-│       │   ├── .bash_completion.d
-│       │   │   ├── fzf-completion.bash
-│       │   │   ├── git.sh
-│       │   │   ├── task.sh
-│       │   │   ├── tmuxinator.bash
-│       │   │   └── tmux.sh
-│       │   ├── .bash_function
-│       │   ├── .bash_history
-│       │   ├── .bash_history_pref
-│       │   ├── .bash_integrations
-│       │   ├── .bash_logout
-│       │   ├── .bash_profile
-│       │   ├── .bashrc
-│       │   ├── .bash_tab-completion
-│       │   └── .profile
-│       ├── openbox
-│       │   └── etc
-│       │       └── openbox
-│       │           ├── autostart.sh
-│       │           ├── menu.xml
-│       │           └── rc.xml
-│       └── taskwarrior
-│           ├── etc
-│           │   └── tasknc
-│           │       └── config
-│           ├── share
-│           │   └── taskwarrior
-│           │       └── dark-pastels-256.theme
-│           ├── .taskhelmrc
-│           ├── .taskopenrc
-│           ├── .taskrc
-│           └── .taskreport
-└── var
-    ├── backups
-    ├── cache
-    ├── cloud
-    ├── code
-    │   ├── archiv
-    │   ├── deb
-    │   ├── emacs
-    │   ├── fritzbox
-    │   ├── java
-    │   ├── mozilla
-    │   ├── projects
-    │   ├── vcs
-    │   ├── virtualbox
-    │   └── wine
-    ├── documents
-    ├── log
-    │   └── .git
-    ├── mail
-    ├── music
-    ├── pictures
-    ├── public
-    ├── src
-    ├── tmp
-    │   └── downloads
-    ├── videos
-    └── virtualization
+|-- bin
+|-- .cache
+|-- .config
+|-- etc
+|   |-- fontconfig
+|   `-- .git
+|-- .local
+|-- share
+|   |-- applications
+|   |-- desktop
+|   |-- desktop-directories
+|   |-- .git
+|   |-- sounds
+|   |-- templates
+|   `-- themes
+|-- stow
+|   |-- bin
+|   |   |-- bin
+|   |   |-- gist-pub
+|   |   |-- .git
+|   |   |-- opt
+|   |   `-- sbin
+|   `-- local
+|       |-- bash
+|       |   |-- .bash_aliases
+|       |   |-- .bash_color
+|       |   |-- .bash_completion.d
+|       |   |   |-- fzf-completion.bash
+|       |   |   |-- git.sh
+|       |   |   |-- task.sh
+|       |   |   |-- tmuxinator.bash
+|       |   |   `-- tmux.sh
+|       |   |-- .bash_function
+|       |   |-- .bash_history
+|       |   |-- .bash_history_pref
+|       |   |-- .bash_integrations
+|       |   |-- .bash_logout
+|       |   |-- .bash_profile
+|       |   |-- .bashrc
+|       |   |-- .bash_tab-completion
+|       |   `-- .profile
+|       |-- openbox
+|       |   `-- etc
+|       |       `-- openbox
+|       |           |-- autostart.sh
+|       |           |-- menu.xml
+|       |           `-- rc.xml
+|       `-- taskwarrior
+|           |-- etc
+|           |   `-- tasknc
+|           |       `-- config
+|           |-- share
+|           |   `-- taskwarrior
+|           |       `-- dark-pastels-256.theme
+|           |-- .taskhelmrc
+|           |-- .taskopenrc
+|           |-- .taskrc
+|           `-- .taskreport
+|-- tree
+`-- var
+    |-- backups
+    |-- cache
+    |-- cloud
+    |-- code
+    |   |-- archiv
+    |   |-- deb
+    |   |-- emacs
+    |   |-- fritzbox
+    |   |-- java
+    |   |-- mozilla
+    |   |-- projects
+    |   |-- vcs
+    |   |-- virtualbox
+    |   `-- wine
+    |-- documents
+    |-- log
+    |   `-- .git
+    |-- mail
+    |-- music
+    |-- pictures
+    |-- public
+    |-- src
+    |-- tmp
+    |   `-- downloads
+    |-- videos
+    `-- virtualization
 ```
