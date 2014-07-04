@@ -67,7 +67,7 @@ export X_XDG_MAIL_DIR
 ```
 
 ```
-# $ tree  -a -P "*" -n --noreport -L 20 "$(pwd)" --charset=ascii-o tree
+# $ tree  -a -P "*" -n --noreport -L 20 --charset=ascii "$(pwd)"
 
 /home/user
 |-- bin
@@ -128,7 +128,6 @@ export X_XDG_MAIL_DIR
 |           |-- .taskopenrc
 |           |-- .taskrc
 |           `-- .taskreport
-|-- tree
 `-- var
     |-- backups
     |-- cache
