@@ -1,0 +1,10 @@
+Name,Language,Link,
+dmenu2,C,https://bitbucket.org/melek/dmenu2
+dmenu,C,http://tools.suckless.org/dmenu/
+fzf,Ruby,https://github.com/junegunn/fzf
+gof,Go,https://github.com/mattn/gof
+peco,Go;https://github.com/peco/peco
+percol,Python,https://github.com/mooz/percol
+selecta,Ruby,https://github.com/garybernhardt/selecta
+slmenu,C,https://bitbucket.org/rafaelgg/slmenu
+tmenu,C,https://github.com/dhamidi/tmenu
