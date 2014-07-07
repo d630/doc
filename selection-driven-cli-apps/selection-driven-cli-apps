@@ -1,8 +1,11 @@
 Name,Language,Link,
+choose,Python,https://github.com/geier/choose
+choose,Python,https://github.com/vain/bin-pub/blob/master/choose
 dmenu2,C,https://bitbucket.org/melek/dmenu2
 dmenu,C,http://tools.suckless.org/dmenu/
 fzf,Ruby,https://github.com/junegunn/fzf
 gof,Go,https://github.com/mattn/gof
+iselect,Python,http://www.ossp.org/pkg/tool/iselect/
 peco,Go;https://github.com/peco/peco
 percol,Python,https://github.com/mooz/percol
 selecta,Ruby,https://github.com/garybernhardt/selecta
