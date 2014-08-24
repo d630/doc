@@ -5,6 +5,7 @@ choose,Python,https://github.com/geier/choose
 choose,Python,https://github.com/vain/bin-pub/blob/master/choose
 dmenu2,C,https://bitbucket.org/melek/dmenu2
 dmenu,C,http://tools.suckless.org/dmenu/
+extendp,C,https://github.com/jkarni/extendp
 fzf,Ruby,https://github.com/junegunn/fzf
 gof,Go,https://github.com/mattn/gof
 hstr,C,https://github.com/dvorka/hstr
