@@ -11,7 +11,7 @@ hstr,C,https://github.com/dvorka/hstr
 iselect,Python,http://www.ossp.org/pkg/tool/iselect/
 kcd,C++,http://kcd.sourceforge.net/
 pdmenu,C,http://joeyh.name/code/pdmenu/
-peco,Go;https://github.com/peco/peco
+peco,Go,https://github.com/peco/peco
 percol,Python,https://github.com/mooz/percol
 rofi,C,https://davedavenport.github.io/rofi/
 selecta,Ruby,https://github.com/garybernhardt/selecta
