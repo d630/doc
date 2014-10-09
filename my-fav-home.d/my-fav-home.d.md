@@ -1,4 +1,4 @@
-Modified home directory, using: `git`, `mr`, `stow` (soon `vcsh`). The stow dir works with symlinks into `~/bin`, `~/etc` and `~/share`. Just some examples there.
+Modified home directory, using: `git`, `mr`, `stow` (soon `vcsh`). The stow dir works with symlinks into `~/bin`, `~/etc`, `~/share` and `~/var`.
 
 ```sh
 # ~/etc/user-dirs.dirs
@@ -13,78 +13,48 @@ XDG_PICTURES_DIR="$HOME/var/pictures"
 XDG_VIDEOS_DIR="$HOME/var/videos"
 ```
 
-```bash
-# ~/.profile
+```sh
+# ~/.profile.d/11-evars-user.sh
 
-# [...]
+[ -f "${XDG_CONFIG_HOME}/vars.priv" ]  && . "${XDG_CONFIG_HOME}/vars.priv"
 
-HOME="/home/${USER}"
-
-PATH="/sbin:/usr/sbin:/usr/local/sbin:/usr/games:/usr/local/games:${PATH}"
-[ -d "${HOME}/bin" ] && PATH="${HOME}/bin:${PATH}"
-
-MAIL="${HOME}/var/mail/Maildir/system-mailspool"
-XDG_CACHE_HOME="${HOME}/var/cache"
-XDG_CONFIG_DIRS="/etc/xdg"
-XDG_CONFIG_HOME="${HOME}/etc"
-XDG_DATA_DIRS="/usr/local/share:/usr/share"
-XDG_DATA_HOME="${HOME}/share"
-#$XDG_RUNTIME_DIR
 X_MAILDIR="${HOME}/var/mail/Maildir"
+X_XCLIENT=openbox
 X_XDG_BACKUPS_DIR="${HOME}/var/backups"
 X_XDG_CODE_DIR="${HOME}/var/code"
+X_XDG_LIB_DIR="${HOME}/var/lib"
 X_XDG_LOG_HOME="${HOME}/var/log"
 X_XDG_MAIL_DIR="${HOME}/var/mail"
+X_XDG_SOURCE_DIR="${HOME}/src"
 X_XDG_TMP_HOME="${HOME}/var/tmp"
 
-[ -f "${XDG_CONFIG_HOME}/user-dirs.dirs" ] && source "${XDG_CONFIG_HOME}/user-dirs.dirs"
-
-export HOME
-export MAIL
-export PATH
-export XDG_CACHE_HOME
-export XDG_CONFIG_DIRS
-export XDG_CONFIG_HOME
-export XDG_DATA_DIRS
-export XDG_DATA_HOME
-export XDG_DESKTOP_DIR
-export XDG_DOCUMENTS_DIR
-export XDG_DOWNLOAD_DIR
-export XDG_MUSIC_DIR
-export XDG_PICTURES_DIR
-export XDG_PUBLICSHARE_DIR
-export XDG_TEMPLATES_DIR
-export XDG_VIDEOS_DIR
-export X_MAILDIR
-export X_XDG_BACKUPS_DIR
-export X_XDG_CODE_DIR
-export X_XDG_LOG_HOME
-export X_XDG_TMP_HOME
-export X_XDG_MAIL_DIR
-
 # [...]
-
 ```
 
 ```
-# $ tree  -a -P "*" -n --noreport -L 20 --charset=ascii "$(pwd)"
+# $ tree  -a -P "*" -n --noreport -L 20 --charset=ascii "$PWD"
 
 /home/user
 |-- bin
 |-- .cache
 |-- .config
 |-- etc
-|   |-- fontconfig
 |   `-- .git
 |-- .local
 |-- share
 |   |-- applications
+|   |-- cert
 |   |-- desktop
 |   |-- desktop-directories
+|   |-- fonts
 |   |-- .git
+|   |-- gvfs-metadata
 |   |-- sounds
 |   |-- templates
-|   `-- themes
+|   |-- themes
+|   |-- Trash
+|   `-- recently-used.xbel
+|-- src
 |-- stow
 |   |-- bin
 |   |   |-- bin
@@ -94,36 +64,47 @@ export X_XDG_MAIL_DIR
 |   |   `-- sbin
 |   `-- local
 |       |-- bash
-|       |   |-- .bash_aliases
-|       |   |-- .bash_color
 |       |   |-- .bash_completion.d
 |       |   |   |-- fzf-completion.bash
 |       |   |   |-- git.sh
-|       |   |   |-- task.sh
-|       |   |   |-- tmuxinator.bash
-|       |   |   `-- tmux.sh
-|       |   |-- .bash_function
+|       |   |   |-- git-prompt.sh
+|       |   |   `-- task.sh
+|       |   |-- .bashrc.d
+|       |   |   |-- alias.sh
+|       |   |   |-- applications.sh
+|       |   |   |-- color.sh
+|       |   |   |-- completion.sh
+|       |   |   |-- function.sh
+|       |   |   `-- history.sh
 |       |   |-- .bash_history
-|       |   |-- .bash_history_pref
-|       |   |-- .bash_integrations
 |       |   |-- .bash_logout
 |       |   |-- .bash_profile
-|       |   |-- .bashrc
-|       |   |-- .bash_tab-completion
-|       |   `-- .profile
+|       |   `-- .bashrc
 |       |-- openbox
 |       |   `-- etc
 |       |       `-- openbox
-|       |           |-- autostart.sh
 |       |           |-- menu.xml
-|       |           `-- rc.xml
+|       |           |-- rc.xml
+|       |           |-- rc-applications.xml
+|       |           |-- rc-desktops.xml
+|       |           |-- rc-dock.xml
+|       |           |-- rc-focus.xml
+|       |           |-- rc-keyboard.xml
+|       |           |-- rc-margins.xml
+|       |           |-- rc-menu.xml
+|       |           |-- rc-mouse.xml
+|       |           |-- rc-placement.xml
+|       |           |-- rc-resistance.xml
+|       |           |-- rc-resize.xml
+|       |           `-- rc-theme.xml
 |       `-- taskwarrior
 |           |-- etc
 |           |   `-- tasknc
 |           |       `-- config
-|           |-- share
-|           |   `-- taskwarrior
-|           |       `-- dark-pastels-256.theme
+|           |-- var
+|           |   `-- lib
+|           |       `-- taskwarrior
+|           |           `-- dark-pastels-256.theme
 |           |-- .taskhelmrc
 |           |-- .taskopenrc
 |           |-- .taskrc
@@ -144,13 +125,13 @@ export X_XDG_MAIL_DIR
     |   |-- virtualbox
     |   `-- wine
     |-- documents
+    |-- lib
     |-- log
     |   `-- .git
     |-- mail
     |-- music
     |-- pictures
     |-- public
-    |-- src
     |-- tmp
     |   `-- downloads
     |-- videos
