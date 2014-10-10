@@ -80,6 +80,8 @@ X_XDG_TMP_HOME="${HOME}/var/tmp"
 |       |   |-- .bash_logout
 |       |   |-- .bash_profile
 |       |   `-- .bashrc
+|       |-- .git
+|       |-- .gitignore
 |       |-- openbox
 |       |   `-- etc
 |       |       `-- openbox
