@@ -1,0 +1,3 @@
+[submodule "docs/docs"]
+	path = docs/docs
+	url = https://gist.github.com/e27b17f3da843f974c50
