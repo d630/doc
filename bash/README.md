@@ -1,6 +1,6 @@
 [Pseudo-manpages](https://gist.github.com/D630/2c6d81bde813676a2d0b) of all `GNU bash` builtin commands.
 
-```sh
+```shell
 % bash --version
 GNU bash, version 4.3.30(1)-release (x86_64-pc-linux-gnu)
 Copyright (C) 2013 Free Software Foundation, Inc.
