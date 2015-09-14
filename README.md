@@ -1,1 +1,1 @@
-See [wiki](https://github.com/d630/doc/wiki)
+See [Wiki](https://github.com/d630/doc/wiki)
